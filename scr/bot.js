@@ -1,16 +1,17 @@
-const { TOKEN_DISCORD, PREFIX, GOOGLE_KEY } = require('../config.js');
+const { TOKEN_DISCORD, PREFIX} = require('../config.js');
 const Discord = require('discord.js');
 const fs = require("fs");
 const path = require("path");
 const dotenv = require('dotenv');
 const bot = new Discord.Client();
 const client = require('nekos.life');
-const neko = new client();
 bot.commands = new Discord.Collection();
 bot.queues = new Map();
 
 
-dotenv.config();
+require('dotenv/config');
+
+console.log(process.env.example.TOKEN)
 
 const commandFiles = fs
     .readdirSync(path.join(__dirname, "/commands"))
@@ -42,7 +43,3 @@ try {
 } catch (error) {
     return console.log(erro);
 }
-
-
-const Youtube = require('simple-youtube-api');
-const youtube = new Youtube(GOOGLE_KEY);
