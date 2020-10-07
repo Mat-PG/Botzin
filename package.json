@@ -1,0 +1,31 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node scr/bot.js --watch scr/*",
+    "dev": "node scr/bot.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "dotenv": "^8.2.0",
+    "ffbinaries": "^1.1.4",
+    "ffmpeg": "0.0.4",
+    "opusscript": "0.0.7",
+    "simple-youtube-api": "^5.2.1",
+    "yt-search": "^2.3.0",
+    "ytdl-core": "^3.2.2",
+    "ytdl-core-discord": "^1.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "_comment": "nodemon scr/bot.js --watch scr/*",
+  "keywords": [],
+  "description": "Bot Disc",
+  "engines": {
+    "node": "12.18.3"
+  }
+}
