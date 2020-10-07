@@ -1,4 +1,4 @@
-const { TOKEN_DISCORD, PREFIX} = require('../config.js');
+const {PREFIX, TOKEN_DISCORD} = require('../config.js');
 const Discord = require('discord.js');
 const fs = require("fs");
 const path = require("path");
@@ -8,10 +8,7 @@ const client = require('nekos.life');
 bot.commands = new Discord.Collection();
 bot.queues = new Map();
 
-
-require('dotenv/config');
-
-console.log(process.env.example.TOKEN)
+console.log(TOKEN_DISCORD)
 
 const commandFiles = fs
     .readdirSync(path.join(__dirname, "/commands"))
@@ -26,7 +23,7 @@ bot.login(TOKEN_DISCORD);
 
 
 bot.on("ready", function () {
-    console.log("Olá onii-chan <3.");
+    console.log("Olá");
 });
 try {
     bot.on("message", (msg) => {
